@@ -1,0 +1,84 @@
+<form  [class] = "'form'">
+
+<h2 [id]="'heding'">Number System Conversion</h2>
+
+<br>
+
+<div [class]="'Conversion-Buttons'">
+
+    <label [id] = '"cnv"'>From</label>
+   <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Binary" value="Binary"  [(ngModel)] ="selectedButton1">
+        <label class="form-check-label" for="Binary">Binary</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Octal" value="Octal"  [(ngModel)] ="selectedButton1">
+        <label class="form-check-label" for="Octal">Octal</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Decimal" value="Decimal"  [(ngModel)] ="selectedButton1">
+        <label class="form-check-label" for="Decimal">Decimal</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="Hex" value="Hex"  [(ngModel)] ="selectedButton1">
+        <label class="form-check-label" for="Hex">Hex</label>
+      </div>
+
+</div>
+
+<br>
+
+<div [class]="'Conversion-Buttons2'">
+
+    <label>To</label>
+
+    &nbsp;&nbsp;
+
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Binary2" value="Binary"  [(ngModel)] ="selectedButton2">
+        <label class="form-check-label" for="Binary2">Binary</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Octal2" value="Octal" [(ngModel)] ="selectedButton2">
+        <label class="form-check-label" for="Octal2">Octal</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Decimal2" value="Decimal" [(ngModel)] ="selectedButton2">
+        <label class="form-check-label" for="Decimal2">Decimal</label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="Hex2" value="Hex" [(ngModel)] ="selectedButton2">
+        <label class="form-check-label" for="Hex2">Hex</label>
+      </div>
+
+</div>
+
+<br>
+
+<div [class] = "'inputField'">
+    <input [type]="'text'" [id]="'textfield1'" [(ngModel)] ="textFieldvalue" [ngModelOptions]="{ standalone: true }">
+</div>
+
+<br>
+
+<div [class] = "'CButton'"> 
+    <button type="button" class="btn btn-primary" (click)="Convert()">Convert</button>
+</div>
+
+<h4>Result:&nbsp;{{Result}}</h4>
+<br>
+<br>
+<div [class] ="'copyAndClear'">
+
+  <input type="button" [id] ="'btnCopy'" value = "Copy 📋" (click) = "copy()" [(ngModel)] ="copybtn" [ngModelOptions]="{ standalone: true }">&nbsp;
+  <input type="button" [id] ="'btnClear'" value= "Clear ✖" (click) = "Clear()" >
+ </div>
+
+</form>
+
